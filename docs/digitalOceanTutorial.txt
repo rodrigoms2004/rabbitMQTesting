@@ -1,0 +1,20 @@
+https://www.digitalocean.com/community/tutorials/how-to-install-and-manage-rabbitmq
+
+
+Enable RabbitMQ application repository:
+
+echo "deb http://www.rabbitmq.com/debian/ testing main" >> /etc/apt/sources.list
+Add the verification key for the package:
+
+curl http://www.rabbitmq.com/rabbitmq-signing-key-public.asc | sudo apt-key add -
+Update the sources with our new addition from above:
+
+apt-get update
+And finally, download and install RabbitMQ:
+
+sudo apt-get install rabbitmq-server
+In order to manage the maximum amount of connections upon launch, open up and edit the following configuration file using nano:
+
+sudo vim /etc/default/rabbitmq-server
+Uncomment the limit line (i.e. remove #) before saving and exit using :wq
+

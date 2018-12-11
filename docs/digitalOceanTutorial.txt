@@ -18,3 +18,8 @@ In order to manage the maximum amount of connections upon launch, open up and ed
 sudo vim /etc/default/rabbitmq-server
 Uncomment the limit line (i.e. remove #) before saving and exit using :wq
 
+
+
+http://127.0.0.1:15672
+user: guest
+pass: guest
